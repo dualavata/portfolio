@@ -16,7 +16,10 @@
 }
 
 .bg2 {
-    background-image: linear-gradient(#000032,black);
+    margin: 0;
+    padding: 0;
+    background: rgb(0, 0, 50);
+    background: linear-gradient(180deg, rgba(0, 0, 50, 1) 0%, rgba(15, 15, 69, 1) 50%, rgba(18, 18, 71, 1) 100%);
     background-size: cover;
 }
 
@@ -50,7 +53,7 @@ body::-webkit-scrollbar {
 }
 
 .u1::after {
-    left: 85px;
+    left: 86px;
 }
 
 .u2::after {
@@ -58,7 +61,7 @@ body::-webkit-scrollbar {
 }
 
 .u3::after {
-    left: 285px;
+    left: 275px;
 }
 
 .underline:hover .custom-underline::after {
@@ -177,13 +180,32 @@ body::-webkit-scrollbar {
     width: 300px;
 }
 
-.button-downCv button{
+.button-downCv button {
     margin-top: 20px;
     color: #01bbf0;
     background-color: #142632;
     text-decoration: none;
     border: 2px solid;
     border-radius: 290486px;
+}
+
+.avatar img {
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.title p {
+    text-underline-position: under;
+    text-decoration: underline;
+    text-decoration-color: white;
+    color: white;
+}
+
+.about-text p {
+    color: #ABACBF;
+    text-align: justify;
 }
 
 /* desktop  */
@@ -205,8 +227,6 @@ body::-webkit-scrollbar {
         align-items: flex-end;
     }
 
-    .slide-show {}
-
     .slide-show img {
         position: absolute;
         left: 70%;
@@ -216,10 +236,37 @@ body::-webkit-scrollbar {
         padding: 20px 80px;
         font-size: 20px;
     }
+
+    .avatar img {
+        margin-top: 45px;
+    }
+
+    .title {
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+
+    .title p {
+        font-size: 32px;
+    }
+
+    .about-text p {
+        font-size: 20px;
+    }
+
+    .page2 {
+        display: flex;
+        align-items: center;
+    }
 }
 
 /* mobile  */
 @media screen and (max-width: 599px) {
+    .navbar {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
     .nav-link {
         text-align: right;
         margin-top: 5px;
@@ -229,11 +276,10 @@ body::-webkit-scrollbar {
         background-position: right;
     }
 
+
     .banner p {
         font-size: 26px;
         color: white;
-        margin-left: 16px;
-        margin-right: 16px;
         line-height: 1.1;
         font-weight: bold;
     }
@@ -267,16 +313,39 @@ body::-webkit-scrollbar {
     .button-downCv button {
         padding: .5em 2em;
         font-size: 16px;
-        margin-left: 16px;
+        margin-bottom: 10px;
+    }
+
+    .contain {
+        margin-left: 16px !important;
+        margin-right: 16px;
+    }
+
+    .bg2 {
+        padding-top: 130px;
+    }
+
+    .title p {
+        padding-top: 40px;
+        font-size: 20px;
+    }
+
+    .avatar {
+        padding: 10px;
     }
 }
 
 
 /* tablet  */
 @media screen and (min-width:599px) and (max-width:1007px) {
+
     .bg1 {
         /* background-size: 100%; */
         background-position: right;
+    }
+
+    .navbar {
+        padding-top: 10px !important;
     }
 
     .nav-link {
@@ -303,12 +372,22 @@ body::-webkit-scrollbar {
         position: absolute;
         height: 150px;
     }
+
     .button-downCv button {
         padding: .5em 2em;
         font-size: 16px;
         margin-left: 16px;
     }
 
+    .page2 {
+        padding: 16px;
+    }
+
+    .avatar img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* logo */
